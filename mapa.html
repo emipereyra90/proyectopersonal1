@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales Perdidos en Mapa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT975Nj_1mmbTBYrQ8BfXSHN1ytZxTnDw&callback=initMap" async defer></script>
+
+
+    <script src="js/map.js" defer></script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn"><img src="animales perdidos.png" height="50px" alt=""></button>
+            <div class="dropdown-content">
+                <a href="index.html">Inicio</a>
+                <a href="informacion.html">Información</a>
+                <a href="mapa.html">Animales Perdidos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+<div class="infomapa1">
+<p>En el mapa, los íconos rojos indican las mascotas que se estan buscando. <br> Los íconos verdes muestran los animales que han sido vistos perdidos, <br>facilitando su identificación y localización.</p>
+</div>
+<br>
+<br>
+    <div class="map-container">
+        <div id="map"></div>
+        <div id="info-window" class="map-info-window">
+            <p id="info-description"></p>
+            <p>Contacto: <span id="info-contact"></span></p>
+            <p><strong>Fecha de publicación:</strong> <span id="info-date"></span></p> <!-- Agregado para la fecha -->
+            <img id="info-image" src="" alt="Foto">
+        </div>
+    </div>
+</body>
+</html>

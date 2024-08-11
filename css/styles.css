@@ -1,0 +1,374 @@
+/* Estilos generales */
+body {
+    background-image: url(../fondo4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 200px;
+    max-height: 1200px;
+    min-width: 200px;
+    max-width: 2000px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Barra de navegación */
+.navbar {
+    overflow: hidden;
+    background-color: beige;
+}
+
+.navbar .dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.navbar .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.navbar .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Contenedor general */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: beige;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(112, 8, 8);
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Alineación de botones con textos */
+.buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones en el contenedor */
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del botón */
+}
+
+/* Estilo específico para los botones */
+.btn-perdido, .btn-encontrado {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el texto dentro del botón */
+}
+
+.btn-perdido {
+    background-color: red;
+    color: white;
+}
+
+.btn-encontrado {
+    background-color: green;
+    color: white;
+}
+
+/* Estilos de los formularios */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+input[type="file"] {
+    height: 30px;
+    margin-bottom: 20px;
+}
+textarea, input[type="tel"], input[type="file"] {
+    width: calc(100% - 22px); /* Ajusta el ancho para incluir el padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilo específico para el selector de archivo */
+
+/* Botón de publicar */
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px; /* Añade margen superior para separación */
+}
+
+/* Estilos específicos para el mapa */
+#map {
+    width: 100%;
+    height: 100vh; /* Ajusta la altura del mapa al 50% de la altura del viewport */
+    background: url('path-to-your-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+}
+
+/* Estilos específicos para la página del mapa */
+.map-container {
+    position: relative;
+    max-width: 1000px; /* Ancho máximo del contenedor del mapa */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #333; /* Marco alrededor del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el marco */
+    background-color: #fff; /* Fondo blanco para el contenedor */
+}
+
+.map-container #map {
+    width: 100%;
+    height: 60vh; /* Ajusta la altura del mapa */
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+}
+
+/* Estilos del mensaje de éxito */
+#success-message {
+    text-align: center;
+    font-size: 18px;
+    color: green;
+    margin-top: 20px;
+}
+
+/* Estilos de la ventana de información en el mapa */
+.map-info-window {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: none;
+    max-width: 300px;
+}
+
+.map-info-window img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.descripcion{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.descripcionindex {
+    text-align: center;
+    width: 200px;
+    padding-right: 10px;
+}
+
+.descripcionindex1 {
+    padding-left: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+/* Estilos específicos para la página del mapa */
+.infomapa1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: beige;
+    width: 90%; /* Ajusta el ancho según sea necesario */
+    border: 2px solid black; /* Borde más visible */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+.infomapa1 h2 {
+    color: rgb(112, 8, 8);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.infomapa1 p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Estilos específicos para la página de información */
+.info-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: beige;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f5f5dc; /* Borde color beige */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-container h1 {
+    color: rgb(112, 8, 8);
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info-container p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.info-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.info-container ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para la palabra 'Perdido' en rojo */
+.btn-red {
+    color: red;
+}
+
+/* Estilo para la palabra 'Encontrado' en verde */
+.btn-green {
+    color: green;
+}
+
+/* Estilo del mensaje de donaciones */
+.donation {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgb(112, 8, 8);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Estilos específicos para la página de contacto */
+.contact-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: beige;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f5f5dc; /* Borde color beige */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: rgb(112, 8, 8);
+}
+
+.contact-container p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-container input[type="text"], .contact-container input[type="email"], .contact-container input[type="tel"], .contact-container textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-container button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

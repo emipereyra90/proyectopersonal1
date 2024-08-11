@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Mascotas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT975Nj_1mmbTBYrQ8BfXSHN1ytZxTnDw" async defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn"><img src="animales perdidos.png" height="50px" alt=""></button>
+            <div class="dropdown-content">
+                <a href="index.html">Inicio</a>
+                <a href="informacion.html">Información</a>
+                <a href="mapa.html">Animales perdidos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <center>
+            <img src="animales perdidos.png" class="imagen" height="100px">
+        </center>
+        <br> <br>
+    <div class="descripcion">
+       <div class="descripcionindex">
+         <p class="btn-red" >Perdido</p> <p>Te permite publicar una imagen y la ubicación de tu mascota extraviada, facilitando su búsqueda."</p>
+        </div>
+        
+        <div class="descripcionindex1">
+         <p class="btn-green" >Encontrado</p> <p>Te permite publicar una foto y la ubicación de un animal encontrado, ayudando a reunirlo con su dueño."</p> 
+        <br> <br>
+        </div>
+    </div>
+        <div class="buttons">
+            <button class="btn-perdido" onclick="showForm('perdido')">Perdido</button>
+            <button class="btn-encontrado" onclick="showForm('encontrado')">Encontrado</button>
+        </div>
+        <div id="form-container">
+            <form id="perdido-form" action="php/save_mascota.php" method="POST" enctype="multipart/form-data" style="display:none;">
+                <input type="hidden" name="tipo" value="perdido">
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion-perdido" required></textarea>
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" name="telefono" id="telefono-perdido" required>
+                <label for="foto">Foto:</label>
+                <input type="file" name="foto" id="foto-perdido" required>
+                <div id="map-perdido" class="map" style="height: 400px;"></div>
+                <input type="hidden" name="latitud" id="latitud-perdido">
+                <input type="hidden" name="longitud" id="longitud-perdido">
+                <button type="submit">Publicar</button>
+            </form>
+            <form id="encontrado-form" action="php/save_mascota.php" method="POST" enctype="multipart/form-data" style="display:none;">
+                <input type="hidden" name="tipo" value="encontrado">
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion-encontrado" required></textarea>
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" name="telefono" id="telefono-encontrado" required>
+                <label for="foto">Foto:</label>
+                <input type="file" name="foto" id="foto-encontrado" required>
+                <div id="map-encontrado" class="map" style="height: 400px;"></div>
+                <input type="hidden" name="latitud" id="latitud-encontrado">
+                <input type="hidden" name="longitud" id="longitud-encontrado">
+                <br> <br>
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+        <div id="success-message" style="display:none;">Publicado con éxito</div>
+    </div>
+</body>
+</html>
